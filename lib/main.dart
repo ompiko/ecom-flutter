@@ -3,7 +3,7 @@ import 'package:carousel_pro/carousel_pro.dart';
 
 //local import
 import 'package:flutter_ecom/components/horizontal_listView.dart';
-
+import 'package:flutter_ecom/components/products.dart';
 void main(){
   runApp(
     new MaterialApp(
@@ -126,6 +126,16 @@ class _HomePageState extends State<HomePage> {
 
           //Horizontal listView begins are here
           HorizontalListView(),
+
+          //padding widget
+          new Padding(padding: const EdgeInsets.all(20.0),
+            child: new Text('Recent seen products'),),
+
+          //grid view
+          Container(
+            height: 320.0,
+            child: Products(),
+          )
         ],
       ),
     );

@@ -56,6 +56,10 @@ flutter:
     - images/categories/deskPC.png
     - images/categories/livingRoom.png
     - images/categories/pixarLamp.png
+    - images/products/ch11.jpg
+    - images/products/ch12.jpg
+    - images/products/ch13.jpg
+    - images/products/ch14.jpg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 
