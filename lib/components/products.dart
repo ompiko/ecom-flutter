@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ecom/pages/product_details.dart';
 
 class Products extends StatefulWidget {
   @override
@@ -16,6 +17,18 @@ class _ProductsState extends State<Products> {
     {
       "name": "Chair 2",
       "picture": "images/products/ch12.jpg",
+      "old_price": 108,
+      "new_price": 90,
+    },
+    {
+      "name": "Chair 3",
+      "picture": "images/products/ch13.jpg",
+      "old_price": 108,
+      "new_price": 90,
+    },
+    {
+      "name": "Chair 4",
+      "picture": "images/products/ch14.jpg",
       "old_price": 108,
       "new_price": 90,
     },
@@ -55,7 +68,15 @@ class Single_product extends StatelessWidget {
           tag: product_name,
           child: Material(
             child: InkWell(
-              onTap: () {},
+              onTap: () => Navigator.of(context).push(new MaterialPageRoute(
+                  builder: (context) => new ProductDetails(
+                    //passing the value a product to page product_details
+                    product_details_name: product_name,
+                    product_details_picture: product_picture,
+                    product_details_old_price: product_old_price,
+                    product_details_new_price: product_new_price,
+
+                  ))),
               child: GridTile(
                   footer: Container(
                     color: Colors.white,
@@ -64,9 +85,24 @@ class Single_product extends StatelessWidget {
                         product_name,
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
+                      title: Text(
+                        "\$$product_new_price",
+                        style: TextStyle(
+                            color: Colors.red, fontWeight: FontWeight.w800),
+                      ),
+                      subtitle: Text(
+                        "\$$product_old_price",
+                        style: TextStyle(
+                            color: Colors.black54,
+                            fontWeight: FontWeight.w800,
+                            decoration: TextDecoration.lineThrough),
+                      ),
                     ),
                   ),
-                  child: Image.asset(product_picture, fit: BoxFit.cover,)),
+                  child: Image.asset(
+                    product_picture,
+                    fit: BoxFit.cover,
+                  )),
             ),
           )),
     );
