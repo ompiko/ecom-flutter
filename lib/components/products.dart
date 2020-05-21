@@ -62,7 +62,7 @@ class _ProductsState extends State<Products> {
     return GridView.builder(
         itemCount: product_list.length,
         gridDelegate:
-            new SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+        new SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
         itemBuilder: (BuildContext context, int index) {
           return Single_product(
             product_name: product_list[index]['name'],
@@ -73,7 +73,6 @@ class _ProductsState extends State<Products> {
         });
   }
 }
-
 class Single_product extends StatelessWidget {
   final product_name;
   final product_picture;
@@ -89,7 +88,7 @@ class Single_product extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: Hero(
-          tag: product_name,
+          tag: new Text("hero 1"),
           child: Material(
             child: InkWell(
               onTap: () => Navigator.of(context).push(new MaterialPageRoute(

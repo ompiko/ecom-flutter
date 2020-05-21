@@ -86,35 +86,35 @@ class _HomePageState extends State<HomePage> {
               onTap: () {},
               child: ListTile(
                 title: Text('Home'),
-                leading: Icon(Icons.home),
+                leading: Icon(Icons.home, color: Colors.amber),
               ),
             ),
             InkWell(
               onTap: () {},
               child: ListTile(
                 title: Text('My Account'),
-                leading: Icon(Icons.person),
+                leading: Icon(Icons.person, color: Colors.amber),
               ),
             ),
             InkWell(
               onTap: () {},
               child: ListTile(
                 title: Text('My Orders'),
-                leading: Icon(Icons.shopping_basket),
+                leading: Icon(Icons.shopping_basket, color: Colors.amber),
               ),
             ),
             InkWell(
               onTap: () {},
               child: ListTile(
-                title: Text('Categories'),
-                leading: Icon(Icons.dashboard),
+                title: Text('Shopping Cart'),
+                leading: Icon(Icons.shopping_cart, color: Colors.amber,),
               ),
             ),
             InkWell(
               onTap: () {},
               child: ListTile(
                 title: Text('Favourite'),
-                leading: Icon(Icons.favorite),
+                leading: Icon(Icons.favorite, color: Colors.amber),
               ),
             ),
             Divider(),
