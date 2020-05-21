@@ -32,6 +32,30 @@ class _ProductsState extends State<Products> {
       "old_price": 108,
       "new_price": 90,
     },
+    {
+      "name": "ChairCP",
+      "picture": "images/products/ch11.jpg",
+      "old_price": 100,
+      "new_price": 88,
+    },
+    {
+      "name": "Chair 2CP",
+      "picture": "images/products/ch12.jpg",
+      "old_price": 108,
+      "new_price": 90,
+    },
+    {
+      "name": "Chair 3CP",
+      "picture": "images/products/ch13.jpg",
+      "old_price": 108,
+      "new_price": 90,
+    },
+    {
+      "name": "Chair 4CP",
+      "picture": "images/products/ch14.jpg",
+      "old_price": 108,
+      "new_price": 90,
+    },
   ];
   @override
   Widget build(BuildContext context) {
@@ -80,24 +104,13 @@ class Single_product extends StatelessWidget {
               child: GridTile(
                   footer: Container(
                     color: Colors.white,
-                    child: ListTile(
-                      leading: Text(
-                        product_name,
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                      title: Text(
-                        "\$$product_new_price",
-                        style: TextStyle(
-                            color: Colors.red, fontWeight: FontWeight.w800),
-                      ),
-                      subtitle: Text(
-                        "\$$product_old_price",
-                        style: TextStyle(
-                            color: Colors.black54,
-                            fontWeight: FontWeight.w800,
-                            decoration: TextDecoration.lineThrough),
-                      ),
-                    ),
+                    child: new Row(
+                      children: <Widget>[
+                        Expanded(child: new Text(product_name, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18.0),),
+                        ),
+                        new Text("\$${product_new_price}", style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold),)
+                      ],
+                    )
                   ),
                   child: Image.asset(
                     product_picture,

@@ -38,6 +38,7 @@ class _HomePageState extends State<HomePage> {
         dotSize: 3.0,
         dotColor: Colors.deepOrange,
         indicatorBgPadding: 3.0,
+        dotBgColor: Colors.transparent,
       ),
     );
     return Scaffold(
@@ -159,7 +160,7 @@ class _HomePageState extends State<HomePage> {
 
           //grid view
           Container(
-            height: 320.0,
+            height: 250.0,
             child: Products(),
           )
         ],
