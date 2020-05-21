@@ -240,7 +240,7 @@ class _ProductDetailsState extends State<ProductDetails> {
               //REMEMBER CREATE PRODUCT BRAND
               Padding(
                 padding: EdgeInsets.all(5.0),
-                child: new Text("Brand XXX"),
+                child: new Text("Brand xyz"),
               )
             ],
           ),
