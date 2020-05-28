@@ -5,6 +5,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 //local import
 import 'package:flutter_ecom/components/horizontal_listView.dart';
 import 'package:flutter_ecom/components/products.dart';
+import 'package:flutter_ecom/pages/cart.dart';
 
 void main() {
   runApp(
@@ -57,7 +58,10 @@ class _HomePageState extends State<HomePage> {
                 Icons.shopping_cart,
                 color: Colors.white,
               ),
-              onPressed: () {}),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => new Cart()));
+              }),
         ],
       ),
       drawer: new Drawer(
@@ -104,7 +108,10 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(context,
+                    new MaterialPageRoute(builder: (context) => new Cart()));
+              },
               child: ListTile(
                 title: Text('Shopping Cart'),
                 leading: Icon(Icons.shopping_cart, color: Colors.amber,),
