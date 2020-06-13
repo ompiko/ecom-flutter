@@ -29,19 +29,29 @@ class _CartState extends State<Cart> {
         child: Row(
           children: <Widget>[
             Expanded(
-                child: ListTile(
+                child: Container(
+                  width: 100,
+                  child: ListTile(
               title: new Text("Total: "),
-              subtitle: new Text("\$499"),
-            )),
-            Expanded(
-              child: new MaterialButton(
-                onPressed: () {},
-                child: new Text(
-                  "Check out",
-                  style: TextStyle(color: Colors.white),
+              subtitle: new Text("\$622"),
+            ),
+                )),
+            Container(
+              width: 120,
+              // child: Expanded(
+                child: new MaterialButton(
+                  onPressed: () {},
+                  child: new Text(
+                    "Check out",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  color: Colors.amber,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                    // side: BorderSide(color: Colors.amber),
+                  ),
                 ),
-                color: Colors.amber,
-              ),
+              // ),
             )
           ],
         ),
